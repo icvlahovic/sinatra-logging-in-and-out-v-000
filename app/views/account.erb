@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% @user = current_user(session) %>
-    <% if @user.is_logged_in?(session) %>
-      <h1>Welcome<%= @user.username %></h1>
-      <h1>Your Balance:<%= @user.balance %></h1>
+    <% @current_user = current_user(session) %>
+    <% if @current_user.is_logged_in?(session) %>
+      <h1>Welcome<%= @current_user.username %></h1>
+      <h1>Your Balance:<%= @current_user.balance %></h1>
     <% end >
   </body>
 </html>
